@@ -63,7 +63,7 @@ while True:
 		if pts[i] == None or pts[i -1] == None:
 			continue
 		thickness = int((np.sqrt(args['buffer']/float(i + 1))) * 2.5)
-		cv2.line(frame ,pts[i] ,pts[i-1] ,(0 ,0 ,255) ,thickness)
+		cv2.line(frame ,pts[i-1] ,pts[i] ,(0 ,0 ,255) ,thickness)
 
 	cv2.imshow("Frame", frame)
 	key = cv2.waitKey(1) & 0xFF

@@ -71,7 +71,7 @@ while True:
 
         if counter >=10 and i ==1 and pts[-10] is not None:
             dX = pts[-10][0] - pts[i][0]
-            dY = pts[-10][0] - pts[i][1]
+            dY = pts[-10][1] - pts[i][1]
             (dirX ,dirY) = ("" ,"")
 
             if np.abs(dX) > 20:

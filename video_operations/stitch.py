@@ -1,4 +1,4 @@
-from panorama import Stitcher
+from helper.panorama import Stitcher
 import argparse
 import imutils
 import cv2

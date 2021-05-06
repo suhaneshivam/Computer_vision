@@ -24,7 +24,7 @@ def order_points_old(pts):
 def order_points(pts):
 
     #sort the pts from left to right according to their x cordinate
-    xSorted = pts[np.argsort(pts[: ,1]) , :]
+    xSorted = pts[np.argsort(pts[: ,0]) , :]
 
     leftMost = xSorted[ : 2]
     rightMost = xSorted[2 : ]
@@ -40,8 +40,8 @@ def order_points(pts):
 	# our bottom-right point
     d = dist.cdist(tl[np.newaxis] ,rightMost ,'euclidean')[0]
     # dist.cdist return a array of order m1 x m2 if we input m1 x n and m2 x n arrays. here
-    # we input 1 x 2 and 2 x 2 array as tl[np,newaxis] and rightMost which looks like
-    #[[d1 ,d2]]
+    # we input 1 x 2 and 2 x 2 array as tl[np.newaxis] and rightMost.Output d looks like
+    #[[d1 ,d2]].
     rightMost = rightMost[np.argsort( d)[::-1] , :]
     (br ,tr) = rightMost
 
